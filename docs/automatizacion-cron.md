@@ -2,30 +2,19 @@
 
 ## Objetivo
 
-Configurar Cron para ejecutar automáticamente los scripts del sistema.
+Configurar Cron para ejecutar automáticamente los scripts del proyecto y evitar tener que ejecutarlos manualmente.
 
-## Monitoreo automático
+## Cron del sistema de monitoreo
 
 El script de monitoreo se ejecuta cada minuto mediante la siguiente configuración:
 
 ```text
 * * * * * /home/david/proyecto-monitor/scripts/monitor_recursos.sh
-## Verificación
+Esta tarea permite revisar periódicamente el uso de los recursos del sistema.
 
-Para consultar las tareas programadas se utiliza:
+## Cron del respaldo
 
-```bash
-crontab -l
-La tarea se ejecuta automáticamente cada minuto y genera registros en el archivo logs/monitor.log.
+El script de respaldo se programa para ejecutarse cada 12 horas:
 
-Para verificar que Cron está funcionando:
-
-systemctl status cron --no-pager
-
-El servicio debe aparecer como active (running).
-
-Para revisar los registros generados:
-
-tail -n 10 logs/monitor.log
-
-Estos registros permiten comprobar que el script se está ejecutando y detectar posibles alertas de CPU, memoria o disco.
+```text
+0 */12 * * * /home/david/proyecto-monitor/scripts/backup_db.sh
