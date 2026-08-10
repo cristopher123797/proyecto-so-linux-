@@ -4,3 +4,12 @@ CPU alta: 88% - Proceso responsable:   22184 Isolated Web Co 16.6
 [2026-08-09 19:44:01] ALERTA:
 CPU alta: 84% - Proceso responsable:   24995 ps               100
 
+[2026-08-09 19:57:02] ALERTA:
+CPU alta: 91% - Proceso responsable:   25990 ps               100
+
+[2026-08-09 19:58:01] ALERTA:
+CPU alta: 98% - Proceso responsable:   26071 ps               100
+
+[2026-08-09 20:35:03] ALERTA:
+CPU alta: 100% - Proceso responsable:   30038 ps               200
+
